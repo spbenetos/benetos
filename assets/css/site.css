@@ -1,0 +1,324 @@
+/* Benetos — generated from tokens.json */
+:root, [data-theme="light"] {
+  --canvas: #f5f3ef; /* Page background behind everything. The warm off-white of benetos.com. */
+  --surface: #ffffff; /* Sheets and cards that sit on canvas: venture cards, the solid nav bar, menus. */
+  --stone-100: #edeae5; /* Secondary tiles and quiet fills (a secondary card, an input at rest); hover fill for secondary buttons. */
+  --stone-200: #e0dbd4; /* Pressed fills and dividers that need more weight than line. */
+  --stone-400: #b6aea4; /* Decorative stone: discs and shapes behind glass, image placeholders. Never a text ground. */
+  --stone-500: #928a80; /* The brand taupe. Hero and media panels, the cover's main block. Text on it is on-stone at 24px or larger only (3.4:1 light, 3.8:1 dark). */
+  --stone-700: #5c554d; /* Deep stone for panels that carry white copy. on-stone reads on it at any size (7.3:1 light, 9.6:1 dark). */
+  --ink: #161514; /* All primary text, on canvas, surface, stone-100, stone-200 and every glass token (16:1 or more on the solids; 5.4:1 on glass over a black photo). Also the primary button fill. */
+  --ink-muted: #635d55; /* Secondary copy and metadata on canvas, surface, stone-100 and stone-200 only (4.7:1 or more in both themes). Never on glass or stone-400 and darker. */
+  --ink-hover: #5c554d; /* The bloom fill of primary buttons and icon buttons on hover and keyboard focus; its label stays on-ink (7.3:1 light, 11.4:1 dark). */
+  --on-ink: #ffffff; /* Label and icon on an ink fill: the primary button, the ink pill. */
+  --on-stone: #ffffff; /* White copy on stone-700 (any size), on stone-500 at 24px+, and on photography under scrim. */
+  --line: #e5e1db; /* Hairlines: separators, card outlines on canvas, the secondary button outline (its label identifies it). */
+  --line-strong: #8f887f; /* Borders that identify a control on their own: inputs, checkboxes, toggles (3:1 or more on canvas and surface). */
+  --glass: rgba(255,255,255,0.55); /* Frosted panel fill. Always with backdrop-filter blur(var(--blur-lg)), a 1px glass-edge border and shadow-glass, over imagery or stone. Text on it is ink. */
+  --glass-strong: rgba(255,255,255,0.82); /* Denser frost for chrome that must stay legible over anything: the glass nav bar, glass buttons and pills, the monogram chip. Text on it is ink. */
+  --glass-edge: rgba(255,255,255,0.65); /* The 1px border on every glass surface; catches light along the edge. */
+  --glass-stone: rgba(146,138,128,0.42); /* Warm taupe frost for large panels over photography. It holds surface cards; no text sits on it directly. */
+  --scrim: rgba(22,21,20,0.40); /* Darkening layer on photography so on-stone copy holds 4.5:1. */
+  --skeleton: #e8e4dd; /* Placeholder blocks of a skeleton screen while content loads, on canvas and surface. Decorative only; never carries text. */
+  --skeleton-shine: rgba(255,255,255,0.75); /* The highlight band that sweeps left to right across skeleton blocks. */
+  --live: #2e6a46; /* Status text and dot for a venture that is live; on live-soft, surface or canvas (5.3:1 or more). Always with a word. */
+  --live-soft: #e2eee5; /* Ground of the live status pill. */
+  --beta: #8a5310; /* Status text and dot for a venture in beta or coming soon; on beta-soft, surface or canvas (5.3:1 or more). Always with a word. */
+  --beta-soft: #f5eadb; /* Ground of the beta status pill. */
+  --shadow-sm: 0 1px 2px #1615141a, 0 1px 1px #16151408; /* Cards resting on canvas, the secondary button. */
+  --shadow-md: 0 2px 6px #16151412, 0 16px 40px -12px #16151424; /* Menus, popovers, a card on hover. */
+  --shadow-glass: inset 0 1px 0 #ffffffa6, 0 12px 40px -16px #16151438; /* Every glass surface: an inner top highlight plus a soft drop. */
+  --focus-ring: 0 0 0 2px #f5f3ef, 0 0 0 3px #161514; /* Keyboard focus on every control: a 2px canvas gap, then 2px of solid ink (16:1). A box-shadow, so it follows the pill. */
+}
+[data-theme="dark"] {
+  --canvas: #151412;
+  --surface: #1f1d1b;
+  --stone-100: #2a2724;
+  --stone-200: #36322e;
+  --stone-400: #5e5850;
+  --stone-500: #8a8278;
+  --stone-700: #4a443e;
+  --ink: #f3f0eb;
+  --ink-muted: #a8a197;
+  --ink-hover: #d3ccc2;
+  --on-ink: #161514;
+  --on-stone: #ffffff;
+  --line: #302d2a;
+  --line-strong: #776f67;
+  --glass: rgba(31,29,27,0.72);
+  --glass-strong: rgba(31,29,27,0.86);
+  --glass-edge: rgba(255,255,255,0.10);
+  --glass-stone: rgba(138,130,120,0.30);
+  --scrim: rgba(10,9,8,0.50);
+  --skeleton: #2d2a27;
+  --skeleton-shine: rgba(255,255,255,0.07);
+  --live: #8fcfa6;
+  --live-soft: #1b2d22;
+  --beta: #e8b46c;
+  --beta-soft: #33271a;
+  --shadow-sm: 0 1px 2px #00000066;
+  --shadow-md: 0 2px 6px #00000052, 0 16px 40px -12px #000000b3;
+  --shadow-glass: inset 0 1px 0 #ffffff1a, 0 12px 40px -16px #000000cc;
+  --focus-ring: 0 0 0 2px #151412, 0 0 0 3px #f3f0eb;
+}
+:root {
+  --space-1: 4px; /* Icon-to-label gap inside pills. */
+  --space-2: 8px; /* Gaps between pills and between buttons in a row; logo-to-wordmark gap. */
+  --space-3: 12px; /* Inside small controls; stacked text in a card. */
+  --space-4: 16px; /* Gap between cards; mobile page gutter. */
+  --space-5: 20px; /* Card padding. */
+  --space-6: 24px; /* Glass panel padding; desktop page gutter. */
+  --space-8: 32px; /* Headline to its supporting copy; panel padding on wide screens. */
+  --space-12: 48px; /* Hero copy to hero media. */
+  --space-16: 64px; /* Between sections on mobile. */
+  --space-24: 96px; /* Between sections on desktop. */
+  --radius-sm: 10px; /* Thumbnails, inputs, app-icon monograms. */
+  --radius-md: 16px; /* Cards and the media inside panels. */
+  --radius-lg: 24px; /* Glass panels, hero media, venture card media frames. */
+  --radius-xl: 32px; /* Page-sized sheets: the hero frame, full-bleed panels. */
+  --radius-full: 9999px; /* Buttons, icon buttons, pills, the nav bar when it floats. */
+  --blur-sm: 12px; /* Pills and buttons on glass. */
+  --blur-md: 20px; /* The glass nav bar. */
+  --blur-lg: 40px; /* Glass panels and the glass-stone sheet. */
+  --content-max: 1200px; /* Max width of page content. */
+  --content-narrow: 680px; /* Max width of reading copy and centred hero text. */
+  --nav-height: 56px; /* Height of the nav bar. */
+  --font-sans: "Commissioner", "Commissioner Greek", -apple-system, "SF Pro Text", system-ui, sans-serif;
+  --text-display-xl: 400 72px/72px var(--font-sans); /* The hero headline. Once per page, centred or left, at most two lines. */
+  --text-display: 400 52px/56px var(--font-sans); /* Section titles on the home page and a venture's page title. */
+  --text-title: 400 32px/36px var(--font-sans); /* Panel headlines, including white headlines on stone-700 or photography. */
+  --text-heading: 500 20px/26px var(--font-sans); /* Venture names on cards, card and dialog titles. */
+  --text-body-lg: 400 17px/26px var(--font-sans); /* Intro paragraphs under a display headline. Max 60 characters a line. */
+  --text-body: 400 15px/22px var(--font-sans); /* Running copy and venture one-liners. */
+  --text-body-sm: 400 13px/18px var(--font-sans); /* Metadata, captions, footnotes; usually in ink-muted. */
+  --text-label: 500 13px/16px var(--font-sans); /* Buttons, nav links, pills, tabs. */
+  --text-eyebrow: 500 11px/14px var(--font-sans); /* Set in uppercase. Small labels above a headline or inside a prefix pill. Use sparingly. */
+}
+.display-xl {
+  font-family: var(--font-sans);
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.display {
+  font-family: var(--font-sans);
+  font-size: 52px;
+  line-height: 56px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+.title {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.heading {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+@font-face {
+  font-family: "Commissioner";
+  src: url("/assets/fonts/Commissioner-Latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commissioner Greek";
+  src: url("/assets/fonts/Commissioner-Greek.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Benetos components. Load after tokens.css. */
+
+/* Metric-matched fallback: Arial resized to Commissioner's width and line metrics, so text doesn't shift when the web font arrives. */
+@font-face { font-family: "Commissioner Fallback"; src: local("Arial"), local("ArialMT"), local("Liberation Sans"); size-adjust: 101.6%; ascent-override: 100.1%; descent-override: 20.3%; line-gap-override: 0%; }
+
+/* Smooth page changes: same-site navigations cross-fade (Chrome, Edge, Safari 18.2+; others just navigate). */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+body { margin: 0; font-family: var(--font-sans); background: var(--canvas); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+.bn-icon { display: block; flex: none; }
+.bn-arrow { transition: transform 160ms ease-out; }
+
+/* Button: every action is a pill */
+.bn-btn { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: 6px; box-sizing: border-box; font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 500; letter-spacing: -0.005em; text-decoration: none; white-space: nowrap; border-radius: var(--radius-full); border: 1px solid transparent; cursor: pointer; transition: border-color 240ms ease-out, transform 120ms ease-out; }
+.bn-btn--md { height: 40px; padding: 0 18px; }
+.bn-btn--sm { height: 32px; padding: 0 14px; }
+.bn-btn--primary { background: var(--ink); color: var(--on-ink); }
+.bn-btn--secondary { background: var(--surface); color: var(--ink); border-color: var(--line); box-shadow: var(--shadow-sm); }
+.bn-btn--glass { background: var(--glass-strong); color: var(--ink); border-color: var(--glass-edge); -webkit-backdrop-filter: blur(var(--blur-sm)) saturate(140%); backdrop-filter: blur(var(--blur-sm)) saturate(140%); }
+@media (hover: hover) { .bn-btn:hover .bn-arrow, .bn-ibtn:hover .bn-arrow, .bn-pill--link:hover .bn-arrow, .bn-venture--link:hover .bn-arrow { transform: translate(2px, -2px); } }
+.bn-btn:focus-visible .bn-arrow, .bn-ibtn:focus-visible .bn-arrow { transform: translate(2px, -2px); }
+
+/* IconButton: circular */
+.bn-ibtn { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0; border-radius: var(--radius-full); border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: border-color 240ms ease-out, transform 120ms ease-out; }
+.bn-ibtn--md { width: 40px; height: 40px; }
+.bn-ibtn--sm { width: 32px; height: 32px; }
+.bn-ibtn--primary { background: var(--ink); color: var(--on-ink); }
+.bn-ibtn--secondary { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.bn-ibtn--glass { background: var(--glass-strong); color: var(--ink); border-color: var(--glass-edge); -webkit-backdrop-filter: blur(var(--blur-sm)) saturate(140%); backdrop-filter: blur(var(--blur-sm)) saturate(140%); }
+
+/* Bloom hover (Button, IconButton, the nav Menu pill). .bn-fill is a copy of the content in the hover colours,
+   revealed by a circle centred on --bloom-x/--bloom-y, which the bundle sets where the pointer enters and leaves. */
+.bn-btn__label { display: inline-flex; align-items: center; gap: 6px; }
+.bn-fill { position: absolute; inset: -1px; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: inherit; background: var(--bloom-fill, var(--ink)); color: var(--bloom-text, var(--on-ink)); pointer-events: none;
+  clip-path: circle(0 at var(--bloom-x, 50%) var(--bloom-y, 50%)); transition: clip-path 480ms cubic-bezier(.2, .8, .2, 1); }
+.bn-btn--primary, .bn-ibtn--primary { --bloom-fill: var(--ink-hover); --bloom-text: var(--on-ink); }
+@media (hover: hover) {
+  .bn-btn:hover .bn-fill, .bn-ibtn:hover .bn-fill, .bn-nav__menu:hover .bn-fill { clip-path: circle(160% at var(--bloom-x, 50%) var(--bloom-y, 50%)); }
+  .bn-btn--secondary:hover, .bn-ibtn--secondary:hover, .bn-nav__menu:hover { border-color: var(--ink); }
+}
+.bn-btn:focus-visible .bn-fill, .bn-ibtn:focus-visible .bn-fill, .bn-nav__menu:focus-visible .bn-fill { clip-path: circle(160% at var(--bloom-x, 50%) var(--bloom-y, 50%)); }
+.bn-btn:active, .bn-ibtn:active, .bn-nav__menu:active { transform: scale(.98); }
+
+.bn-btn:focus-visible, .bn-ibtn:focus-visible, .bn-pill--link:focus-visible, .bn-nav__link:focus-visible, .bn-nav__brand:focus-visible, .bn-nav__menu:focus-visible, .bn-venture__link:focus-visible { outline: 2px solid transparent; outline-offset: 2px; box-shadow: var(--focus-ring); }
+.bn-btn:disabled, .bn-ibtn:disabled, .bn-btn[aria-disabled="true"] { opacity: .4; pointer-events: none; }
+
+/* Pill */
+.bn-pill { display: inline-flex; align-items: center; gap: var(--space-1); box-sizing: border-box; height: 26px; padding: 0 10px; border-radius: var(--radius-full); border: 1px solid transparent; font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0; white-space: nowrap; text-decoration: none; color: var(--ink); }
+.bn-pill--neutral { background: var(--stone-100); }
+.bn-pill--outline { background: var(--surface); border-color: var(--line); }
+.bn-pill--ink { background: var(--ink); color: var(--on-ink); }
+.bn-pill--glass { background: var(--glass-strong); border-color: var(--glass-edge); -webkit-backdrop-filter: blur(var(--blur-sm)) saturate(140%); backdrop-filter: blur(var(--blur-sm)) saturate(140%); }
+.bn-pill--live { background: var(--live-soft); color: var(--live); }
+.bn-pill--beta { background: var(--beta-soft); color: var(--beta); }
+.bn-pill__dot { width: 6px; height: 6px; border-radius: var(--radius-full); background: currentColor; flex: none; }
+.bn-pill__prefix { display: inline-flex; align-items: center; height: 18px; margin-left: -6px; margin-right: 4px; padding: 0 8px; border-radius: var(--radius-full); background: var(--surface); color: var(--ink); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.bn-pill--neutral .bn-pill__prefix, .bn-pill--glass .bn-pill__prefix { background: var(--surface); }
+.bn-pill--outline .bn-pill__prefix { background: var(--stone-100); }
+
+/* NavBar */
+.bn-nav { display: flex; align-items: center; gap: var(--space-6); box-sizing: border-box; height: var(--nav-height); padding: 0 var(--space-4) 0 var(--space-5); font-family: var(--font-sans); color: var(--ink); }
+.bn-nav--solid { background: var(--surface); border-bottom: 1px solid var(--line); }
+.bn-nav--glass { background: var(--glass-strong); border: 1px solid var(--glass-edge); border-radius: var(--radius-full); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(var(--blur-md)) saturate(140%); backdrop-filter: blur(var(--blur-md)) saturate(140%); }
+.bn-nav--clear { background: transparent; }
+.bn-nav__brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--ink); text-decoration: none; border-radius: var(--radius-sm); flex: none; }
+.bn-nav__name { font-size: 18px; line-height: 24px; font-weight: 500; letter-spacing: -0.02em; }
+.bn-mark { display: inline-flex; align-items: center; justify-content: center; }
+.bn-mark__img { display: block; height: 24px; width: auto; }
+.bn-nav__links { display: flex; align-items: center; gap: var(--space-5); margin: 0 auto; }
+.bn-nav__link { font-size: 13px; line-height: 16px; font-weight: 500; letter-spacing: -0.005em; color: var(--ink-muted); text-decoration: none; padding: 6px 2px; border-radius: 6px; transition: color 160ms ease-out; }
+.bn-nav--glass .bn-nav__link, .bn-nav--clear .bn-nav__link { color: var(--ink); }
+.bn-nav__link:hover, .bn-nav__link.is-current { color: var(--ink); }
+.bn-nav__link.is-current { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.bn-nav__end { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; flex: none; }
+.bn-nav__links + .bn-nav__end { margin-left: 0; }
+.bn-nav__menu { position: relative; isolation: isolate; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px 0 14px; border-radius: var(--radius-full); border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 500; cursor: pointer; transition: border-color 240ms ease-out, transform 120ms ease-out; }
+.bn-nav--glass .bn-nav__menu, .bn-nav--clear .bn-nav__menu { border-color: var(--glass-edge); background: var(--glass-strong); }
+@media (max-width: 720px) { .bn-nav__links { display: none; } .bn-nav__end { margin-left: auto; } }
+
+/* GlassPanel */
+.bn-glass { box-sizing: border-box; border-radius: var(--radius-lg); border: 1px solid var(--glass-edge); box-shadow: var(--shadow-glass); color: var(--ink); -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(140%); backdrop-filter: blur(var(--blur-lg)) saturate(140%); }
+.bn-glass--clear { background: var(--glass); }
+.bn-glass--strong { background: var(--glass-strong); }
+.bn-glass--stone { background: var(--glass-stone); }
+.bn-glass--padded { padding: var(--space-6); }
+
+/* VentureCard */
+.bn-venture { position: relative; display: flex; flex-direction: column; gap: var(--space-4); box-sizing: border-box; padding: var(--space-2) var(--space-2) var(--space-5); border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); font-family: var(--font-sans); color: var(--ink); transition: box-shadow 160ms ease-out; }
+.bn-venture--link:hover { box-shadow: var(--shadow-md); }
+.bn-venture__media { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-md); overflow: hidden; background: var(--stone-500); }
+.bn-venture__img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bn-venture__placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 78% 22%, var(--stone-400) 0 26%, transparent 26.5%), radial-gradient(circle at 18% 96%, var(--stone-700) 0 30%, transparent 30.5%), var(--stone-500); }
+.bn-venture__monogram { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 20px; background: var(--glass); border: 1px solid var(--glass-edge); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(var(--blur-lg)) saturate(140%); backdrop-filter: blur(var(--blur-lg)) saturate(140%); font-size: 36px; line-height: 1; font-weight: 400; letter-spacing: -0.04em; color: var(--ink); }
+.bn-venture__status { position: absolute; top: var(--space-3); left: var(--space-3); }
+.bn-venture__body { display: flex; align-items: flex-start; gap: var(--space-3); padding: 0 var(--space-3); }
+.bn-venture__text { flex: 1; min-width: 0; }
+.bn-venture__name { margin: 0; font-size: 20px; line-height: 26px; font-weight: 500; letter-spacing: -0.015em; }
+.bn-venture__link { color: inherit; text-decoration: none; border-radius: 4px; }
+.bn-venture__link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-lg); }
+.bn-venture__desc { margin: 4px 0 0; font-size: 15px; line-height: 22px; letter-spacing: -0.005em; color: var(--ink-muted); }
+.bn-venture__go { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 32px; height: 32px; border-radius: var(--radius-full); border: 1px solid var(--line); color: var(--ink); }
+.bn-venture__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0 var(--space-3); }
+
+/* Skeleton: placeholder blocks that trace the layout while content loads.
+   Each block's band is a ::after moved with transform (GPU-composited, no repaint per frame). The bundle (or static.js)
+   sets --skel-delay from the block's position on screen, so all bands line up into one wave sweeping left to right. */
+@keyframes bn-shimmer { 0% { transform: translateX(-240px); } 70%, 100% { transform: translateX(100vw); } }
+@keyframes bn-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+.bn-skel { position: relative; overflow: hidden; display: block; box-sizing: border-box; background: var(--skeleton); }
+.bn-skel::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 240px; background: linear-gradient(90deg, transparent, var(--skeleton-shine), transparent); transform: translateX(-240px); animation: bn-shimmer 1.8s linear infinite; animation-delay: var(--skel-delay, 0ms); }
+.bn-skel--rect { width: 100%; height: 120px; border-radius: var(--radius-md); }
+.bn-skel--circle { width: 40px; height: 40px; border-radius: var(--radius-full); flex: none; }
+.bn-skel--pill { width: 80px; height: 26px; border-radius: var(--radius-full); flex: none; }
+.bn-skel-text { display: block; }
+.bn-skel--line { width: 100%; border-radius: var(--radius-full); }
+.bn-skel-text--small .bn-skel--line { height: 10px; margin: 4px 0; }
+.bn-skel-text--body .bn-skel--line { height: 12px; margin: 5px 0; }
+.bn-skel-text--heading .bn-skel--line { height: 16px; margin: 5px 0; }
+.bn-skel-text--title .bn-skel--line { height: 22px; margin: 7px 0; }
+.bn-skel-card { box-shadow: none; }
+.bn-skel-card__media { aspect-ratio: 4 / 3; width: 100%; border-radius: var(--radius-md); }
+.bn-skel-card__desc { margin-top: 4px; }
+.bn-content-in { animation: bn-content-in 200ms ease-out; }
+@keyframes bn-content-in { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-transparency: reduce) {
+  .bn-glass--clear, .bn-glass--strong, .bn-glass--stone, .bn-nav--glass, .bn-btn--glass, .bn-ibtn--glass, .bn-pill--glass, .bn-venture__monogram { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .bn-glass--clear, .bn-glass--strong, .bn-nav--glass, .bn-btn--glass, .bn-ibtn--glass, .bn-pill--glass, .bn-venture__monogram { background: var(--surface); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bn-arrow, .bn-btn, .bn-ibtn, .bn-venture, .bn-nav__menu { transition: none; }
+  .bn-fill { clip-path: none !important; opacity: 0; transition: opacity 160ms ease-out; }
+  .bn-btn:hover .bn-fill, .bn-ibtn:hover .bn-fill, .bn-nav__menu:hover .bn-fill, .bn-btn:focus-visible .bn-fill, .bn-ibtn:focus-visible .bn-fill, .bn-nav__menu:focus-visible .bn-fill { opacity: 1; }
+  .bn-btn:focus-visible .bn-arrow, .bn-ibtn:focus-visible .bn-arrow { transform: none; }
+  .bn-skel { animation: bn-pulse 2s ease-in-out infinite; }
+  .bn-skel::after { display: none; }
+  .bn-btn:hover .bn-arrow, .bn-ibtn:hover .bn-arrow, .bn-pill--link:hover .bn-arrow, .bn-venture--link:hover .bn-arrow { transform: none; }
+}
+
+/* Site additions: things the design canvas handled itself */
+[hidden]{display:none !important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+[role="tab"]{background:transparent;box-shadow:none;transition:background-color 160ms ease-out, box-shadow 160ms ease-out}
+[role="tab"][aria-selected="true"]{background:var(--surface);box-shadow:var(--shadow-sm)}
+.tab-dot{width:12px;opacity:.35;transition:width 240ms ease-out, opacity 240ms ease-out}
+.tab-dot.is-on{width:40px;opacity:1}
+@media (prefers-reduced-motion: reduce){[role="tab"],.tab-dot{transition:none}}

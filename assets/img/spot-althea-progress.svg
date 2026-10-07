@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+<defs><radialGradient id="bg" cx="0.35" cy="0.28" r="0.9"><stop offset="0" stop-color="#f3f6f1"/><stop offset="1" stop-color="#d6e6df"/></radialGradient>
+<linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22ad98"/><stop offset="1" stop-color="#0b6f61"/></linearGradient>
+<filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0b3d35" flood-opacity="0.18"/></filter></defs>
+<circle cx="160" cy="160" r="160" fill="url(#bg)"/>
+<path d="M94.9 233.1 A92 92 0 1 1 225.1 233.1" fill="none" stroke="#0e7768" stroke-opacity="0.14" stroke-width="18" stroke-linecap="round"/><path d="M94.9 233.1 A92 92 0 1 1 239.7 122.0" fill="none" stroke="url(#t)" stroke-width="18" stroke-linecap="round"/><circle cx="239.7" cy="122.0" r="13" fill="#ffffff" stroke="#0e7768" stroke-width="5"/><polyline points="112,150 132,156 148,170 166,174 184,190 206,196" fill="none" stroke="#0b6f61" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="206" cy="196" r="8" fill="#d7a14a"/>
+</svg>
